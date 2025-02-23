@@ -1,6 +1,6 @@
         .ORIG x3000
 
-        ; Prompt the user for input
+        ; Prompt for input
         LEA R0, PROMPT
         PUTS
 
@@ -18,7 +18,7 @@
         ADD R2, R0, R1
         BRz PRINT_NO
 
-        ; If input is neither 'y' nor 'n', print "INVALID"
+        ; If input is something else, print "INVALID"
         LEA R0, INVALID
         PUTS
         BR END
