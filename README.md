@@ -2,20 +2,20 @@ This is a implementation of an LC3 virtual machine in C, allowing you to run LC3
 
 ---
 
-### how to use it yourself
+## how to use it yourself
 
-#### necessary
+### necessary
 you need a tool called `lc3as` to assemble the LC3 programs.
 use [this](https://github.com/dennis97519/homebrew-lc3tools)repo to get the lc3tools for macbook using homebrew.
 once you get that done, you can use the `lc3as <path to .asm file>` command.
 Although i have provided the needed `.obj` file in the `examples` folder, the `lc3as` command is still usefull if you want to write you own lc3 assembly code.
 
-#### running the vm
+### running the vm
 `git clone <https://github.com/ChiduAnush/lc3-vm>`
 
 You can either run it using cmake(easier), or you can run it manually yourself.
 
-##### Using CMake:
+#### Using CMake:
 I have already provided the `.obj` file so you dont need the `lc3as` command.
 
 1. after cloning the repo, make sure you are in the root folder.
@@ -37,7 +37,7 @@ I have already provided the `.obj` file so you dont need the `lc3as` command.
 
 
 
-##### Doing it manually: 
+#### Doing it manually: 
 follow below steps to test the vm using the provided asm file.
 
 1. cd to examples folder. 
@@ -59,7 +59,7 @@ You can download some other `.obj` files too, and run it in this vm.
 such as [2048](https://github.com/rpendleton/lc3-2048) or my [Roguelike](https://github.com/justinmeiners/lc3-rogue).
 
 
-#### Run vm using docker (yes, this is for you guys, dear windows users.)
+### Run vm using docker (yes, this is for you guys, dear windows users.)
 
 1. Build the docker image.(make sure you are in the root folder)
    ```
@@ -75,6 +75,11 @@ such as [2048](https://github.com/rpendleton/lc3-2048) or my [Roguelike](http
    ```
    docker run --rm -it -v /home/user/myobjfiles:/objfiles chidu-lc3-vm /objfiles/myfile.obj
    ```
+
+### You can also pull the image directly from docker hub
+1. `docker pull chidu1/lc3-vm`
+2. `docker run --rm -it chidu1/lc3-vm examples/checkKeyboardinput.obj`
+3. If you want to run your own `.obj` file, you need to mount it (using the `-v` flag) and then run it.
 
 
 ---
