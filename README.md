@@ -57,3 +57,25 @@ follow below steps to test the vm using the provided asm file.
 
 You can download some other `.obj` files too, and run it in this vm.
 such as [2048](https://github.com/rpendleton/lc3-2048) or my [Roguelike](https://github.com/justinmeiners/lc3-rogue).
+
+
+#### Run vm using docker (yes, this is for you guys, dear windows users.)
+
+1. Build the docker image.(make sure you are in the root folder)
+   ```
+   docker build -t chidu-lc3-vm .
+   ```
+2. create and run the container from the built image.
+   ```
+   docker run --rm -it -v $(pwd)/examples:/examples chidu-lc3-vm /examples/checkKeyboardinput.obj
+
+   ```
+
+3. or you can use your own `.obj` files if you want to. make sure you mount the folder containing the `.obj` file to a directory inside the container. If their .obj file is in /home/user/myobjfiles/, run:
+   ```
+   docker run --rm -it -v /home/user/myobjfiles:/objfiles chidu-lc3-vm /objfiles/myfile.obj
+   ```
+
+
+---
+Heyo! thanks for reading till here. [Here's](https://www.youtube.com/watch?v=xvFZjo5PgG0) a surprise for you. ;)
