@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(LC3VM C)
+
+set(CMAKE_C_STANDARD 11)
+
+# Add an executable
+add_executable(chiduslc3vm src/vm.c)

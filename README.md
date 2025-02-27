@@ -7,7 +7,7 @@ This is a implementation of an LC3 virtual machine in C, allowing you to run LC3
 ##### necessary
 you need a tool called `lc3as` to assemble the LC3 programs.
 use [this](https://github.com/dennis97519/homebrew-lc3tools)repo to get the lc3tools for macbook using homebrew.
-once you get that done, you can use the `lc3as <path to .asm file>` command.
+once you get that done, you can use the `lc3as <path to .asm file>` command. (refer point 2 below)
 
 ##### running the vm
 `git clone <https://github.com/ChiduAnush/lc3-vm>`

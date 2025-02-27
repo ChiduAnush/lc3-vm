@@ -1,0 +1,14 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	PRINT_YES         300D
+//	PRINT_NO          3010
+//	END               3013
+//	PROMPT            3014
+//	YES_MSG           3023
+//	NO_MSG            3035
+//	INVALID           3046
+//	CHAR_Y            3056
+//	CHAR_N            3057
+
